@@ -1,0 +1,1040 @@
+html {
+  color-scheme: light dark;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+  max-width: 1000px;
+  margin: 80px auto;
+  line-height: 1.6;
+  color: #111;
+}
+
+/* header */
+header {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: black;
+}
+
+p {
+  margin: 0;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding-top: 20px;
+
+  border-top: 1px solid grey;
+
+  font-size: 10px;
+  color: black;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.menu a {
+  margin-left: 40px;
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  color: grey;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* HERO LAYOUT */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+/* VIDEO */
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.instagram-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-media {
+  width: 100% !important;
+  max-width: 540px !important;
+  min-width: 326px !important;
+  margin: 0 !important;
+}
+
+/* FITBIT — REELS INSTAGRAM */
+
+.fitbit-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.85fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.instagram-reel {
+  width: 100%;
+  min-width: 0;
+}
+
+.instagram-reel .instagram-media {
+  width: 100% !important;
+  max-width: 540px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .fitbit-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  .instagram-reel .instagram-media {
+    max-width: 540px !important;
+    margin: 0 auto !important;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .fitbit-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-reel .instagram-media {
+    max-width: 540px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* INFOS */
+.infos {
+  font-size: 14px;
+}
+
+.infos h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.meta {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* GALERIE */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.image {
+  height: 300px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* GALLERY VERTICALE */
+.image-vertical {
+  height: 500px;
+}
+
+.image-vertical img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* GRID */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* THUMB */
+.thumb {
+  position: relative;
+  display: block;
+}
+
+/* IMAGE */
+.thumb img {
+  width: 100%;
+  display: block;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(128, 128, 128, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* TEXTE */
+.overlay span {
+  color: black;
+  font-size: 16px;
+  background-color: rgb(255 255 255 / 70%);;
+  padding : 8px;
+}
+
+/* HOVER */
+.thumb:hover .overlay {
+  opacity: 1;
+}
+
+/* TEXTE ABOUT */
+.textPortrait {
+  max-width: 500px;
+}
+
+/* NOM */
+.about-name {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* DESCRIPTION */
+.about-description {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* SOCIALS CONTAINER */
+.about-socials {
+  display: flex;
+  flex-direction: row; /* ou row si tu préfères */
+  gap: 12px;
+}
+
+/* CHAQUE LIGNE */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: black;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ICONES */
+.social img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* HOVER */
+.social:hover {
+  text-decoration: underline;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* texte un peu plus large */
+  gap: 60px;
+  margin-bottom: 100px;
+  align-items: start;
+}
+
+.portraitAbel {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+
+/* =========================
+   VIDEOS PROMO PORTAL
+   VERSION GRANDE & VERTICALE
+   ========================= */
+
+/* STACK VERTICAL */
+.vp-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* gros espace entre sections */
+}
+
+/* BLOC */
+.vp-category {
+  position: relative;
+}
+
+/* TITRE */
+.vp-title {
+  position: absolute;
+  inset: 0; /* prend toute la zone */
+
+  display: flex;
+  align-items: center;      /* centre vertical */
+  justify-content: center;  /* centre horizontal */
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none; /* important → laisse cliquer les images */
+}
+
+.vp-title span {
+  background-color: white;
+  padding: 10px;
+}
+
+/* GRID IMAGES */
+.vp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* IMAGES PLUS GRANDES */
+.vp-grid img {
+  width: 100%;
+  height: 300px; /* 🔥 plus grand */
+  object-fit: cover;
+  display: block;
+}
+
+/* HOVER */
+.vp-grid a {
+  position: relative;
+  overflow: hidden;
+}
+
+.vp-grid a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vp-grid a:hover::after {
+  opacity: 1;
+}
+
+/* MICRO ZOOM (propre) */
+.vp-grid img {
+  transition: transform 0.4s ease;
+}
+
+.vp-grid a:hover img {
+  transform: scale(1.03);
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .vp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vp-grid img {
+    height: 250px;
+  }
+}
+
+
+/* =========================
+   HOMEPAGE — MOBILE IMMERSIF
+   ========================= */
+
+@media (max-width: 800px) {
+
+  body {
+    max-width: none;
+    margin: 0;
+  }
+
+  /* HEADER */
+  header {
+    margin: 0;
+    padding: 25px 20px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+
+  .menu a {
+    margin-left: 0;
+    font-size: 10px;
+  }
+
+
+  /* =========================
+     VIDÉO PLEIN ÉCRAN
+     ========================= */
+
+  .projects {
+    width: 100%;
+    margin: 0;
+  }
+
+  .projects .video {
+    width: 100%;
+    height: calc(100vh - 120px);
+    aspect-ratio: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .projects .video iframe {
+    position: absolute;
+
+    /* on agrandit suffisamment pour remplir la hauteur */
+    width: 177.78vh;
+    height: 100vh;
+
+    max-width: none;
+    max-height: none;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  footer {
+    margin: 0;
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+}
+
+/* =========================
+   PAGES PROJETS — MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+
+  /* INFOS DU PROJET */
+  .hero .infos {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* ESPACEMENT ENTRE VIDÉO ET INFOS */
+  .hero {
+    gap: 5px;
+    margin-bottom: 40px;
+  }
+
+  /* GALERIE */
+  .gallery {
+    row-gap: 5px;
+    column-gap: 5px;
+  }
+
+  /* IMAGES HORIZONTALES */
+  .image {
+    height: auto;
+  }
+
+  .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* IMAGES VERTICALES */
+  .image-vertical {
+    height: auto;
+  }
+
+  .image-vertical img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+}
+
+/* =========================
+   FITBIT — MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+
+  /* Écrans Fitbit plus petits */
+  .fitbit-hero .image-vertical {
+    width: 65%;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .fitbit-hero .image-vertical img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Texte Fitbit avec marges */
+  .fitbit-hero .infos {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
+
+/* =========================
+   REEL INSTAGRAM HORIZONTAL — MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+
+  .instagram-video {
+    width: 100%;
+    height: 56vw;
+    overflow: hidden;
+  }
+
+  .instagram-video .instagram-media {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+}
+
+/* =========================
+   À PROPOS — MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .textPortrait {
+    width: 100%;
+    max-width: none;
+  }
+
+.about-name {
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+
+  .about-description {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    padding: 0 15px;
+  }
+
+  .about-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    padding: 0 15px;
+  }
+
+  .social {
+    font-size: 10px;
+  }
+
+  .imgPortrait {
+    width: 100%;
+  }
+
+  .portraitAbel {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+}
+
+/* =========================
+   MOBILE — PAS DE SCROLL HORIZONTAL
+   ========================= */
+
+@media (max-width: 800px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+}
+
+/* =========================
+   MODE SOMBRE AUTOMATIQUE
+   ========================= */
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: #111;
+    color: #f5f5f5;
+  }
+
+  /* HEADER */
+  .logo {
+    color: #f5f5f5;
+  }
+
+  .menu a {
+    color: #f5f5f5;
+  }
+
+  .menu a:hover {
+    color: #aaa;
+  }
+
+  /* TEXTES */
+  h1,
+  p {
+    color: #f5f5f5;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top-color: #555;
+    color: #f5f5f5;
+  }
+
+  footer a {
+    color: #f5f5f5;
+  }
+
+  /* TITRES SUR LES IMAGES */
+  .vp-title span {
+    background-color: #111;
+    color: #f5f5f5;
+  }
+
+  .overlay span {
+    background-color: rgba(17, 17, 17, 0.8);
+    color: #f5f5f5;
+  }
+}
+
+/* =========================
+   TABLETTE / IPAD
+   601px → 1100px
+   ========================= */
+
+@media (min-width: 601px) and (max-width: 1100px) {
+
+  /* =========================
+     GLOBAL
+     ========================= */
+
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: auto;
+    max-width: none;
+    margin: 50px clamp(40px, 6vw, 70px);
+    overflow-x: hidden;
+  }
+
+
+  /* =========================
+     HEADER
+     ========================= */
+
+  header {
+    margin-bottom: 50px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .menu a {
+    margin-left: 25px;
+    font-size: 11px;
+  }
+
+
+  /* =========================
+     HOMEPAGE
+     ========================= */
+
+  .projects {
+    width: 100%;
+    margin: 0;
+    gap: 20px;
+  }
+
+  .projects .video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .projects .video iframe {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+  }
+
+
+  /* =========================
+     PAGES PROJETS — HERO
+     ========================= */
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 35px;
+    margin-bottom: 50px;
+  }
+
+  .hero .infos {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .infos {
+    font-size: 13px;
+  }
+
+  .infos h1 {
+    font-size: 19px;
+    margin-bottom: 20px;
+  }
+
+  .meta {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+
+  /* =========================
+     VIDÉOS
+     ========================= */
+
+  .video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* =========================
+     GALERIE
+     ========================= */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .image {
+    height: 250px;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+
+  /* =========================
+     GALERIE VERTICALE
+     ========================= */
+
+  .image-vertical {
+    height: 400px;
+  }
+
+  .image-vertical img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+
+  /* =========================
+     FITBIT
+     ========================= */
+
+  .fitbit-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.85fr;
+    gap: 20px;
+    align-items: start;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  .instagram-reel {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .instagram-reel .instagram-media {
+    width: 100% !important;
+    max-width: 540px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+
+  /* =========================
+     INSTAGRAM
+     ========================= */
+
+  .instagram-video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .instagram-video .instagram-media {
+    width: 100% !important;
+    max-width: 540px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+
+  /* =========================
+     À PROPOS
+     ========================= */
+
+  .about {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    margin-bottom: 70px;
+    align-items: start;
+  }
+
+  .textPortrait {
+    max-width: 500px;
+  }
+
+  .about-name {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .about-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social {
+    font-size: 10px;
+  }
+
+  .portraitAbel {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  /* =========================
+     VIDEOS PROMO
+     ========================= */
+
+  .vp-categories {
+    gap: 60px;
+  }
+
+  .vp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .vp-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    font-size: 10px;
+  }
+
+}
+
+/* =========================
+   SÉCURITÉ SCROLL TABLETTE
+   ========================= */
+
+@media (min-width: 601px) and (max-width: 1100px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  main {
+    overflow: visible;
+  }
+
+  .hero,
+  .gallery,
+  .about,
+  .fitbit-hero,
+  .vp-categories {
+    overflow: visible;
+  }
+}
